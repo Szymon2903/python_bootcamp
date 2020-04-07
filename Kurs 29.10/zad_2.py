@@ -17,6 +17,7 @@ print(podstawa_a)  # wyswietlamy zawartosc zmiennej podstawa_a
 # Konwencja kodowania, konwencja nazewnicza, czyli zbiór zasad
 # jakich sie trzymamy przy pisaniu kodu
 
+
 pole_trapezu = 0.5 * (podstawa_a + podstawa_b) * wysokosc
 
 print(pole_trapezu)
