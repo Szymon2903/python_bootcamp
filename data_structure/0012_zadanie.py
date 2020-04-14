@@ -1,5 +1,8 @@
-counter = 100
-while x > 0:
-    print(x)
-    # x = x - 1
-    x -= 1
+# Napisz program obliczający kwadrat 100 pierwszych liczb całkowitych i wypisujący wyniki na konsolę:
+
+i = 100
+
+while i < 100:
+
+    print("")
+
