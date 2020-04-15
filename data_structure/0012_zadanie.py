@@ -1,8 +1,10 @@
 # Napisz program obliczający kwadrat 100 pierwszych liczb całkowitych i wypisujący wyniki na konsolę:
 
-i = 100
+counter = 100
 
-while i < 100:
+while counter > 0:
 
-    print("")
+    print(f'{counter}**2 = {counter ** 2}')
+
+    counter -= 1
 

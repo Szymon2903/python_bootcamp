@@ -1,6 +1,5 @@
-#Napisz program, któru na podstawie wprowadzonych wymiarów opakowania, obliczy jego objętość oraz sprawdzi, czy jest
-
-# ona większa od 1 litra
+# Napisz program,który na podstawie wprowadzonych wymiarów opakowania,
+# obliczy jego objętość oraz sprawdzi, czy jest ona większa od 1 litra (1000 cm3)
 
 a = float(input("Podaj wymiar a (w cm): "))
 b = float(input("Podaj wymiar b (w cm): "))
