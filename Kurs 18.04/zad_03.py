@@ -7,12 +7,15 @@ produkty = {
     "pomidory": 4.15,
     "cebula": 1.99,
     "kalafiory": 3.20
+
 }
+
 magazyn = {
     "ziemniaki": 10,
     "pomidory": 10,
     "cebula": 10,
     "kalafiory": 10
+
 }
 
 print(produkty.items())
@@ -40,13 +43,18 @@ while True:
     if produkt in produkty:
         ile = input(f"Ile chcesz kupić [{produkt}]? ")
         ile = float(ile)
-        if ile < mahazyn[produkt]:
+        if ile < magazyn[produkt]:
             print(f"Za {ile} kg {produkt} zaplacisz {ile * produkty[produkt]:.2f}" )
             magazyn[produkt] = magazyn[produkt] - ile
         else:
             print("Nie mamy tyle produktu")
     elif komenda == "m":
-        pass
+        produkt = input("Co dodajemy? ")
+        ile - int(input(f"Ile dodajemy [{produkt}]? "))
+        magazyn[produkt] = magazyn.get(produkt, 0) + ile
+        if produkt not in produkty:
+           cena = float(input(f"Jaka cena za [{produkt}]"))
+           produkt[produkt] = cena
     else:
         print("Nierozumiala komenda")
 
