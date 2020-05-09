@@ -37,3 +37,10 @@ zad 4
 # Aby słownik nie wyrzucał nam błędu musimy go przypisać do dokładnej struktóry. Pisanie programów komputerowycch
 # nazywane także etapem implementacji, odbywa się poprzez tworzenie kodu zródłowego w wybranym jeżyku programowania
 
+zrodla = {"a": 10, "b":30}
+podana_liczba = 10
+ if podana_liczba in zrodla.values():
+    value = podana_liczba
+    print(value)
+else:
+    print("nie istnieje")
