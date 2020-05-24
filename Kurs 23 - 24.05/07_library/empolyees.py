@@ -18,26 +18,37 @@
 
 
 import json
+try:
+    with open("employees.json") as fp:
+        lista = json.load(fp)
+except FileNotFoundError:
+    lista = []
+komenda = input("Co chcesz zrobić? [d- dodaj, w-wypisz]: ")
 
-text = '{}'
-dane = json.loads(text)
+if komenda == "d":
+    imie = input("Podaj imie: ")
+    nazwisko = input("Podaj nazwisko: ")
+    rok_urodzenia = int(input("Podaj rok urodzenia: "))
+    pensja = input("Podaj pensję: ")
+    email = input("Podaj email: ")
 
-int(input("d - dodaj: "))
-int(input("w - wypisz: "))
+    pracownik = {
+        "imie": imie,
+        "nazwisko": nazwisko,
+        "rok_urodzenia": rok_urodzenia,
+        "pensja": pensja,
+        "email": email
+    }
 
-print(dane)
-print(type(dane))
+    lista.append(pracownik)
 
-x = {i: i*3 for i in range(10)}
+    with open("employees.json", "w") as fp:
+        json.dump(lista, fp)
 
-print(x, type(x))
-print(json.dumps(x))
-
-
-los = randint(1,100)
-odp = -1
-i = 0
-print ("ZAGRAJMY W GRĘ!")
+elif komenda == "w":
+    print("Pracownicy: ")
+    for i, emp in enumerate(lista, start=1):
+        print(f" - [{i}] {emp['imie']} {emp['nazwisko']} - rok: {emp['rok_urodzenia']}, pensja: {emp['pensja']} PLN")
 
 
 
