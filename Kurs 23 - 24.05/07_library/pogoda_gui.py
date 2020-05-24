@@ -1,26 +1,33 @@
-import tkinter
 
+import tkinter
+from tkinter import messagebox
 from pogoda import get_location_id, get_location_weather, report
 
-def przygotuj_raport():
-    location_name = a_entry.get()
-    location_id = get_location_id(location_name)
-    weather = get_location_wearther(location_id)
-    rep = report(weather, location_name)
-    wynik.configure(text=rep)
+def raport():
+    try:
+        location_name = location_name_entry.get()
+        location_id = get_location_id(location_name)
+        weather = get_location_weather(location_id)
+        rep = report(weather, location_name)
+        wynik.configure(text=rep)
 
-root = tkinter.TK()
-a_label = tkinter.Label(master=root, text="Miasto")
-a_label.pack()
-a_entry = tkinter.Entry(master=root)
-a_entry.pack()
-wynik_labl = tkinter.Label(master=root, text="Dane o pogodzie: ")
+
+    except ValueError:
+        messagebox.showerror("Błędne dane!!", "Popraw dane!")
+
+
+root = tkinter.Tk()
+location_name = tkinter.Label(master=root, text="Wpisz miasto:")
+location_name.pack()
+location_name_entry = tkinter.Entry(master=root)
+location_name_entry.pack()
+
+wynik_labl = tkinter.Label(master=root, text="Raport:")
 wynik = tkinter.Label(master=root, text="")
 wynik_labl.pack()
 wynik.pack()
 
-submit = tkinter.Button(master=root, text="Znajdź", command=get_report)
-
+submit = tkinter.Button(master=root, text="Wyswietl", command=raport)
 submit.pack()
-root.mainloop()
 
+root.mainloop()
