@@ -67,3 +67,6 @@ class TestCashMachine:
         assert cash_machine.withdraw_money(300) == []
 
         cash_machine = CashMachine()
+
+
+
