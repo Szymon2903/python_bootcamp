@@ -12,6 +12,12 @@
 # Sekwencją są listy krotki i napisy, kolejność jej elementów jest ustalana i  ponumerowana.
 # Wyróżniamy trzy typy sekwencji lista krotka i ciąg znaków
 
+# Zad 3
+
+text = "abrakadabra"
+tekst = text[2::3]
+print(tekst)
+
 # 4
 
 # Instrukacja warunkowa jest jednym z największych i fundamentalnych elementów składniowych prawie każdego języka
@@ -43,6 +49,15 @@ while liczba < 10:
     print(liczba)
     liczba = liczba + 1
 
+    i = 10
+    while i > 0:
+        if i == 5:
+            i -= 1
+            continue
+        print(i)
+        i -= 1
+        if i == 0:
+            break
 
 # 6 zad
 
